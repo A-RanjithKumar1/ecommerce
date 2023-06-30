@@ -2,10 +2,6 @@ import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import { useState } from "react";
 const Navbar = (props) => {
-  const [search, setsearch] = useState("");
-  const handleSearch = (event) => {
-    setsearch(event.target.value);
-  };
   return (
     <div>
       <nav className="navbar">
@@ -26,7 +22,7 @@ const Navbar = (props) => {
             <input
               type="text"
               placeholder="search..."
-              onChange={handleSearch}
+              onChange={props.handleSearch}
             ></input>
           </h4>
         </div>

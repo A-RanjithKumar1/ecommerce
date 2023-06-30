@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 const Imagespage = (props) => {
   const { filter } = useContext(FilterContext);
   const { type, settype } = useContext(typefilter);
+
+  console.log("============props", props.arr);
   return (
     <div class="productspage">
       {props.arr.map((items) => {

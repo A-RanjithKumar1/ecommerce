@@ -106,19 +106,31 @@ function App() {
       type: "analog",
     },
   ];
+  const [newarr, setNewarr] = useState(arr);
   const [cart, setCart] = useState([]);
   const [filter, setfilter] = useState([]);
   const [type, settype] = useState([]);
+  const [search, setsearch] = useState("");
+  const handleSearch = (event) => {
+    setsearch(event.target.value);
+    console.log(event.target.value);
+    if (event.target.value !== 0) {
+      const newarr1 = arr.filter((item) =>
+        item.brand.toLowerCase().includes(event.target.value.toLowerCase())
+      );
+      setNewarr(newarr1);
+    }
+  };
   return (
     <div>
       <BrowserRouter>
         <FilterContext.Provider value={{ filter, setfilter }}>
           <cartContext.Provider value={{ cart, setCart }}>
             <typefilter.Provider value={{ type, settype }}>
-              <Navbar value={cart.length}></Navbar>
+              <Navbar value={cart.length} handleSearch={handleSearch}></Navbar>
               <Routes>
-                <Route path="/" element={<Container arr={arr} />}></Route>
-                <Route path="/viewcart" element={<View arr={arr} />}></Route>
+                <Route path="/" element={<Container arr={newarr} />}></Route>
+                <Route path="/viewcart" element={<View arr={newarr} />}></Route>
               </Routes>
             </typefilter.Provider>
           </cartContext.Provider>
