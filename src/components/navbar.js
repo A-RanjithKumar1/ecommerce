@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
-import { useState } from "react";
 const Navbar = (props) => {
   return (
     <div>
@@ -21,7 +20,7 @@ const Navbar = (props) => {
           <h4>
             <input
               type="text"
-              placeholder="search..."
+              placeholder="  search..."
               onChange={props.handleSearch}
             ></input>
           </h4>
@@ -29,12 +28,11 @@ const Navbar = (props) => {
         <Link to={"/viewcart"}>
           <FaCartArrowDown className="cart"></FaCartArrowDown>
         </Link>
-        <span id="cartvalue">
-          <b>{props.value}</b>
+        <span id={props.value == 0 ? "" : "cartvalue"}>
+          <b>{props.value == 0 ? "" : props.value}</b>
         </span>
       </nav>
     </div>
   );
 };
-
 export default Navbar;
