@@ -193,13 +193,11 @@ input[type="checkbox"] {
 .br {
   margin-left: 0px;
 }
-
 .type {
   display: flex;
   flex-direction: column;
   padding-left: 30px;
 }
-
 .price {
   display: flex;
   flex-direction: column;
@@ -218,4 +216,240 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    display: flex;
+    padding: 0;
+    height: 42px;
+    background-color: blue;
+    width: 100%;
+  }
+  .navbar .cart {
+    position: relative;
+    height: 20px;
+    color: white;
+    margin-top: 10px;
+    padding: 0%;
+  }
+  .cart-icon {
+    position: relative;
+  }
+
+  #cartvalue {
+    position: absolute;
+    top: 9px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 6px;
+    padding: 0px;
+    font-size: 10px;
+    width: 15px;
+    height: 13px;
+    border: none;
+  }
+
+  .cart {
+    font-size: 24px;
+  }
+
+  .sitename {
+    display: flex;
+  }
+  .sitename h3 {
+    font-size: 18px;
+    width: 31%;
+    height: 4vh;
+    margin-top: 28px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .sitename input {
+    width: 108%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    height: 4vh;
+  }
+  .Filters h2 {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  li {
+    font-size: small;
+    cursor: pointer;
+  }
+  .Filters {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 96vh;
+    background-color: white;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  .productspage {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 95vh;
+    color: black;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    text-align: center;
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    width: 36vw;
+    height: 49vw;
+    margin: 2px;
+    transition: 0.4s;
+    box-shadow: 1px 1px 6px blue;
+    border-radius: 6px;
+    justify-content: space-between;
+  }
+
+  .image img {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 70px;
+    transition: opacity 0.5s linear;
+    opacity: 1;
+    margin: auto;
+  }
+  .imagecontent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: small;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 14px;
+    font-size: 10px;
+  }
+  .imagecontent button {
+    background-color: black;
+    width: 32vw;
+    height: 5vh;
+    cursor: pointer;
+    font-size: 8px;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    border: 0px;
+    margin: 0px;
+    height: 14px;
+  }
+  .imagecontent h2 {
+    border: 0px;
+    margin: 0px;
+    width: 97px;
+    height: 14px;
+    padding: 0px;
+  }
+  .imagecontent h4 {
+    border: 0px;
+    margin: 0px;
+    width: 97px;
+    height: 14px;
+    padding: 0px;
+  }
+  .viewcard {
+    display: flex;
+    height: auto;
+    text-align: start;
+    display: flex;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    width: 100%;
+    height: 15vw;
+    justify-content: space-between;
+  }
+
+  .viewcard .image img {
+    width: 42px;
+    height: 38px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-right: 20px;
+  }
+
+  .viewcard .button1 {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .viewcard .imagecontent {
+    margin: 0px;
+    width: 100%;
+    display: none;
+  }
+  .imagecontent p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 120px;
+  }
+
+  .viewcard .quantity {
+    width: 50px;
+    margin-right: 10px;
+  }
+  .quantitybtn {
+    margin-top: 0;
+    padding: 0;
+    width: 300px;
+  }
+  .btn {
+    background-color: black;
+    width: 25vw;
+    height: 3.8vh;
+    cursor: pointer;
+    font-size: x-small;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .quantity h4 {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  .viewcard .button1 {
+    width: 100%;
+    margin-top: 0;
+  }
+  .brands,
+  .type,
+  .price {
+    padding-left: 5px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: white;
+  }
 }

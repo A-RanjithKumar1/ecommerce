@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FilterContext } from "../App";
-import { Link } from "react-router-dom";
+import Navbar from "./navbar";
 const View = (props) => {
   const { cart, setCart, count, setCount } = useContext(FilterContext);
   const calculateTotalCartValue = () => {
@@ -33,9 +33,9 @@ const View = (props) => {
   if (cart.length === 0) {
     return (
       <>
-        <button>
+        {/* <button>
           <Link to="/">HOME</Link>
-        </button>
+        </button> */}
         <h2 style={{ textAlign: "center", color: "red" }}>
           Oops! Cart Is Empty
         </h2>
